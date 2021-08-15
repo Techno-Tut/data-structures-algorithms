@@ -5,17 +5,17 @@ namespace DataStructures_Algorithms
 {
     public class BinarySearch
     {
-        static void Main(string[] args)
-        {
-            int[] data = new int[10] {11,22,33,44,55,66,77,88,99,100};
-            string searchKey = Console.ReadLine();
+        // static void Main(string[] args)
+        // {
+        //     int[] data = new int[10] {11,22,33,44,55,66,77,88,99,100};
+        //     string searchKey = Console.ReadLine();
             
-            int key = int.Parse(searchKey);
-            //SimpleBinarySearch(data, key);
+        //     int key = int.Parse(searchKey);
+        //     //SimpleBinarySearch(data, key);
             
-            var result = RecursiveBinarySearch(data,key);
-            Console.WriteLine($"Key {key} found : {result}");
-        }
+        //     var result = RecursiveBinarySearch(data,key);
+        //     Console.WriteLine($"Key {key} found : {result}");
+        // }
 
         static void SimpleBinarySearch(int[] data, int key) {
             int left_pointer = 0;
@@ -50,7 +50,6 @@ namespace DataStructures_Algorithms
                 var subarray = data.Skip(midpoint + 1).ToArray();
                 return RecursiveBinarySearch(subarray, key);
             }
-            
         }
     }
 }
